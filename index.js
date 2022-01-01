@@ -9,7 +9,7 @@ const CLIENT = new DISCORD.Client({
 });
 const FS = require("fs");
 const BDD = require("./bdd.json");
-const CONFIG = require("./config.json");
+// const CONFIG = require("./config.json");
 const CHANNELSID = require("./channelsId.json");
 const ROLESID = require("./rolesId.json");
 const { MessageEmbed } = require("discord.js");
