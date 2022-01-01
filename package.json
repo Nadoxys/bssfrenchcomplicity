@@ -1,0 +1,24 @@
+{
+  "name": "bssfrenchcomplicity",
+  "version": "1.0.0",
+  "description": "discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nadoxys/bssfrenchcomplicity.git"
+  },
+  "author": "Nadoxys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nadoxys/bssfrenchcomplicity/issues"
+  },
+  "homepage": "https://github.com/Nadoxys/bssfrenchcomplicity#readme",
+  "dependencies": {
+    "discord.js": "^13.5.0",
+    "fs": "^0.0.1-security"
+  }
+}
