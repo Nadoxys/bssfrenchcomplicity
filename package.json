@@ -20,5 +20,8 @@
   "dependencies": {
     "discord.js": "^13.5.0",
     "fs": "^0.0.1-security"
+  },
+  "engines": {
+    "node": "16.13.0"
   }
 }
