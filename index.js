@@ -7,6 +7,7 @@ const CLIENT = new DISCORD.Client({
     "GUILD_MESSAGE_REACTIONS",
   ],
 });
+import fetch from "node-fetch";
 const FS = require("fs");
 const BDD = require("./bdd.json");
 // const CONFIG = require("./config.json");
@@ -54,7 +55,7 @@ CLIENT.on("guildMemberRemove", (member) => {
 
 // COMMANDES PREFIX ##########################################################
 
-CLIENT.on("messageCreate", (message) => {
+CLIENT.on("messageCreate", async (message) => {
   if (message.content === PREFIX + "salut") {
     message.reply("Salut " + message.author.username + " !");
   } else {
@@ -202,6 +203,11 @@ CLIENT.on("messageCreate", (message) => {
           message.reply("Aucun warn pour " + member.displayName);
         }
       }
+    } else if (message.content.startsWith(PREFIX + "youtube")) {
+      const DATA = await FETCH(
+        "https://www.googleapis.com/youtube/v3/channels?key=AIzaSyCrF1rgOv768sOF-MFgAI9swGmlyGKvyJs&forUsername=klauskkpm&part=id"
+      ).then((response) => response.json());
+      console.log(DATA);
     }
   }
 });
@@ -212,4 +218,5 @@ function saveBdd() {
   });
 }
 
-CLIENT.login(process.env.TOKEN);
+CLIENT.login("OTI2NDcwNDMyODEzNjI5NTMw.Yc8I1A.D2vnC2aR2rZMIfuPIt10ZCkOtOU");
+//CLIENT.login(process.env.TOKEN);
